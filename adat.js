@@ -1,4 +1,4 @@
-export const adatLeiras = {
+export const tipusLeiras = {
   turanev: {
     megjelenes: "Túra neve",
     tipus: "text",
@@ -9,7 +9,7 @@ export const adatLeiras = {
     required: true,
   },
 
-/*   tajegyseg: {
+  tajegyseg: {
     megjelenes: "Tájegység",
     tipus: "text",
     value: "Példa",
@@ -79,5 +79,20 @@ export const adatLeiras = {
     pattern: {},
     szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
     required: false,
-  }, */
+  }
 };
+
+export const tipusKULCS = {
+  
+  id: "#",
+  turanev: "Túra neve",
+  tajegyseg: "Tájegység",
+  nehezseg: "Nehézség",
+  tavolsag: "Távolság",
+  szintkulonbseg: "Szintkülönbség",
+  kerekpar: "Kerékpár",
+  indulashelye: "Indulás helye",
+  erkezeshelye: "Érkezés helye",
+  leiras: "Leírás",
+}
+

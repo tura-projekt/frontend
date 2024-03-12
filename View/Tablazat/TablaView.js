@@ -1,3 +1,4 @@
+import { tipusKULCS } from "../../adat.js";
 import FejlecView from "./FejlecView.js";
 import SorView from "./SorView.js";
 
@@ -19,7 +20,7 @@ export default class TablaView {
     //console.log(this.formElem);
     //console.log(this.tbodyElem);
 
-    new FejlecView(list[0], this.theadElem);
+    new FejlecView(tipusKULCS, this.theadElem);
     this.sorMegjelenit();
   }
   sorMegjelenit() {

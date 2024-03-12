@@ -10,7 +10,7 @@ export default class FejlecView {
   htmLOsszerak() {
     let txt = "<tr>";
     for (const key in this.#obj) {
-      txt += `<th>${key}</th>`;
+      txt += `<th>${this.#obj[key]}</th>`;
       //console.log(key);
     }
     txt += "</tr>";
