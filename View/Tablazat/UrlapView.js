@@ -1,6 +1,6 @@
 import TextUrlapView from "./TextUrlapView.js";
 import NumberUrlapView from "./NumberUrlapView.js";
-import { adatLeiras } from "../../adat.js";
+import { tipusLeiras } from "../../adat.js";
 
 class UrlapView {
   #formAdat = {};
@@ -68,17 +68,17 @@ class UrlapView {
 
   htmlOsszeallit() {
     let txt = "";
-    for (const key in adatLeiras) {
-      switch (adatLeiras[key].tipus) {
+    for (const key in tipusLeiras) {
+      switch (tipusLeiras[key].tipus) {
         case "text":
           this.#inputElemObjektumokLista.push(
-            new TextUrlapView(this.formElem, adatLeiras[key], key)
+            new TextUrlapView(this.formElem, tipusLeiras[key], key)
           );
           break;
         case "number":
-          //txt += this.numberUrlapElem(adatLeiras[key], key);
+          //txt += this.numberUrlapElem(tipusLeiras[key], key);
           this.#inputElemObjektumokLista.push(
-            new NumberUrlapView(this.formElem, adatLeiras[key], key)
+            new NumberUrlapView(this.formElem, tipusLeiras[key], key)
           );
         default:
           break;
