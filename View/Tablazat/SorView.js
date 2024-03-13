@@ -50,8 +50,8 @@ export default class SorView {
   }
 
   #esemenyTrigger(esemenyNev) {
-    const e = new CustomEvent(esemenyNev, { detail: this.#adat.id });
+    const e = new CustomEvent(esemenyNev, { detail: this.#adat.tipus_id });
     window.dispatchEvent(e);
-    console.log(this.#adat.id);
+    console.log(this.#adat.tipus_id);
   }
 }
