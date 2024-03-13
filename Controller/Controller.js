@@ -14,6 +14,14 @@ class Controller {
       this.dataService.deleteAxiosData(
         "http://localhost:8000/api/turatipusok",
         event.detail);
+        setTimeout(() => {
+          $("#tabla").empty();
+          this.dataService.getAxiosData(
+            "http://localhost:8000/api/turatipusok",
+            this.megjelenit
+          );
+        }, 1000);
+      
     });
   }
 

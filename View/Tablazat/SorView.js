@@ -26,7 +26,9 @@ export default class SorView {
       // callback fv.
       //console.log(this)
       this.#esemenyTrigger("torol");
-      //szuloElem.empty();
+    
+      this.sorElem.remove();
+      //$("#tabla").empty();
       //location.reload()
 
     });
