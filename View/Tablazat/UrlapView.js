@@ -1,6 +1,7 @@
 import TextUrlapView from "./TextUrlapView.js";
 import NumberUrlapView from "./NumberUrlapView.js";
-import { tipusLeiras } from "../../adat.js";
+import { turaLeiras, turatipusLeiras } from "../../adat.js";
+import { turavezetoLeiras } from "../../adat.js";
 
 class UrlapView {
   #formAdat = {};
@@ -11,7 +12,21 @@ class UrlapView {
     szuloElem.append("<form>");
     this.formElem = szuloElem.find("form");
     console.log(this.formElem);
-    this.htmlOsszeallit();
+
+    switch (true) {
+      case document.URL.indexOf("turavezetok.html") >= 0:
+        this.htmlOsszeallit(turavezetoLeiras);
+        break;
+      case document.URL.indexOf("turatipusok.html") >= 0:
+        this.htmlOsszeallit(turatipusLeiras);
+        break;
+      case document.URL.indexOf("turak.html") >= 0:
+        this.htmlOsszeallit(turaLeiras);
+        break;
+    }
+    
+    //this.htmlOsszeallit(turatipusLeiras);
+
     /* submit gomb kezelése
     1. létrehozom a gombhoz a kapaszkodót
     2. hozzárendelem az eseményt
@@ -40,7 +55,6 @@ class UrlapView {
 
       if (this.#urlapValid) {
         this.trigger("ujAdatHozzaAdasa");
-        
       } else {
         console.log("Az adatok nem validak!");
       }
@@ -66,19 +80,19 @@ class UrlapView {
     return txt;
   } */
 
-  htmlOsszeallit() {
+  htmlOsszeallit(adat) {
     let txt = "";
-    for (const key in tipusLeiras) {
-      switch (tipusLeiras[key].tipus) {
+    for (const key in adat) {
+      switch (adat[key].tipus) {
         case "text":
           this.#inputElemObjektumokLista.push(
-            new TextUrlapView(this.formElem, tipusLeiras[key], key)
+            new TextUrlapView(this.formElem, adat[key], key)
           );
           break;
         case "number":
-          //txt += this.numberUrlapElem(tipusLeiras[key], key);
+          //txt += this.numberUrlapElem(adat[key], key);
           this.#inputElemObjektumokLista.push(
-            new NumberUrlapView(this.formElem, tipusLeiras[key], key)
+            new NumberUrlapView(this.formElem, adat[key], key)
           );
         default:
           break;

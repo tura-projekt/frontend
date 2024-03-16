@@ -26,11 +26,10 @@ export default class SorView {
       // callback fv.
       //console.log(this)
       this.#esemenyTrigger("torol");
-    
+
       this.sorElem.remove();
       //$("#tabla").empty();
       //location.reload()
-
     });
 
     this.megseElem.on("click", () => {
@@ -52,8 +51,8 @@ export default class SorView {
   }
 
   #esemenyTrigger(esemenyNev) {
-    const e = new CustomEvent(esemenyNev, { detail: this.#adat.tipus_id });
+    const e = new CustomEvent(esemenyNev, { detail: this.#adat.id });
     window.dispatchEvent(e);
-    console.log(this.#adat.tipus_id);
+    console.log(this.#adat.id);
   }
 }

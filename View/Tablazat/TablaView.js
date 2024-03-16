@@ -1,4 +1,5 @@
-import { tipusKULCS } from "../../adat.js";
+import { turaKULCS, turavezetoKULCS } from "../../adat.js";
+import { turatipusKULCS } from "../../adat.js";
 import FejlecView from "./FejlecView.js";
 import SorView from "./SorView.js";
 
@@ -20,7 +21,18 @@ export default class TablaView {
     //console.log(this.formElem);
     //console.log(this.tbodyElem);
 
-    new FejlecView(tipusKULCS, this.theadElem);
+    switch (true) {
+      case document.URL.indexOf("turavezetok.html") >= 0:
+        new FejlecView(turavezetoKULCS, this.theadElem);
+        break;
+      case document.URL.indexOf("turatipusok.html") >= 0:
+        new FejlecView(turatipusKULCS, this.theadElem);
+        break;
+      case document.URL.indexOf("turak.html") >= 0:
+        new FejlecView(turaKULCS, this.theadElem);
+        break;
+    }
+    //new FejlecView(turavezetoKULCS, this.theadElem);
     this.sorMegjelenit();
   }
   sorMegjelenit() {

@@ -1,6 +1,6 @@
 export default class TextUrlapView {
   #value = "";
-  #valid = false;
+  #valid = true;
 
   constructor(szuloElem, obj, key) {
     this.szuloElem = szuloElem;

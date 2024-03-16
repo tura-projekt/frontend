@@ -1,4 +1,60 @@
-export const tipusLeiras = {
+export const turavezetoLeiras = {
+  name: {
+    megjelenes: "Név",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: false,
+  },
+
+  email: {
+    megjelenes: "email",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: false,
+  },
+
+  cim: {
+    megjelenes: "Cím",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: false,
+  },
+
+  telefonszam: {
+    megjelenes: "Telefonszám",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: false,
+  },
+
+  belepesdatuma: {
+    megjelenes: "Belépés dátuma",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: false,
+  },
+};
+
+export const turavezetoKULCS = {
+  id: "#",
+  name: "Név",
+  email: "email",
+  cim: "Cím",
+  telefonszam: "Telefonszám",
+  belepesdatuma: "Belépés dátuma",
+};
+
+export const turatipusLeiras = {
   turanev: {
     megjelenes: "Túra neve",
     tipus: "text",
@@ -79,12 +135,11 @@ export const tipusLeiras = {
     pattern: {},
     szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
     required: false,
-  }
+  },
 };
 
-export const tipusKULCS = {
-  
-  id: "#",
+export const turatipusKULCS = {
+  tipus_id: "#",
   turanev: "Túra neve",
   tajegyseg: "Tájegység",
   nehezseg: "Nehézség",
@@ -94,5 +149,85 @@ export const tipusKULCS = {
   indulashelye: "Indulás helye",
   erkezeshelye: "Érkezés helye",
   leiras: "Leírás",
-}
+};
 
+export const turaLeiras = {
+  idopont: {
+    megjelenes: "Időpont",
+    tipus: "text",
+    placeholder: "Dátum",
+    pattern: {},
+    value: "",
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!",
+    required: false,
+  },
+
+  turavezeto: {
+    megjelenes: "Túra vezetője",
+    tipus: "text",
+    placeholder: "Túra vezetője",
+    pattern: {},
+    value: "",
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!",
+    required: false,
+  },
+
+  ar: {
+    megjelenes: "Ár",
+    tipus: "text",
+    placeholder: "Ár",
+    pattern: {},
+    value: "",
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!",
+    required: false,
+  },
+
+  min_letszam: {
+    megjelenes: "Minimum létszám",
+    tipus: "text",
+    placeholder: "Minimum létszám",
+    pattern: {},
+    value: "",
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!",
+    required: false,
+  },
+
+  max_letszam: {
+    megjelenes: "Maximum létszám",
+    tipus: "text",
+    placeholder: "Maximum létszám",
+    pattern: {},
+    value: "",
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!",
+    required: false,
+  },
+
+  statusz: {
+    megjelenes: "Státusz",
+    tipus: "text",
+    placeholder: "Státusz",
+    pattern: {},
+    value: "",
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!",
+    required: false,
+  },
+};
+
+export const turaKULCS = {
+  id: "#",
+  tipus_id: "Típus ID",
+  idopont: "Turaidőpont",
+  turavezeto: "Túra vezetője",
+  ar: "Ár",
+  min_letszam: "Minimum létszám",
+  max_letszam: "Maximum létszám",
+  statusz: "Státusz",
+};
+
+"tipus_id",
+  "idopont",
+  "turavezeto",
+  "ar",
+  "min_letszam",
+  "max_letszam",
+  "statusz";
