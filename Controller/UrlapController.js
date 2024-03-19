@@ -20,6 +20,9 @@ class UrlapController {
         case document.URL.indexOf("turak.html") >= 0:
           this.dataService.postAxiosData("turak", event.detail);
           break;
+          case document.URL.indexOf("bejelentkezes.html") >= 0:
+          this.dataService.postAxiosData("bejelentkezes", event.detail);
+          break;
       }
       //this.dataService.postAxiosData("turatipusok", event.detail);
     });

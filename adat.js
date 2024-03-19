@@ -224,10 +224,49 @@ export const turaKULCS = {
   statusz: "Státusz",
 };
 
-"tipus_id",
-  "idopont",
-  "turavezeto",
-  "ar",
-  "min_letszam",
-  "max_letszam",
-  "statusz";
+export const userLeiras = {
+  name: {
+    megjelenes: "Név",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: false,
+  },
+
+  email: {
+    megjelenes: "email",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: false,
+  },
+
+  telefonszam: {
+    megjelenes: "Telefonszám",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: false,
+  },
+
+  password: {
+    megjelenes: "Jelszó",
+    tipus: "text",
+    value: "Példa",
+    pattern: {},
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    required: true,
+  },
+};
+
+export const userKULCS = {
+  id: "#",
+  name: "Név",
+  email: "e-mail",
+  regisztracio_datuma: "Regisztráció dátuma",
+  telefonszam: "Telefonszám",
+  password: "Jelszó",
+};

@@ -1,4 +1,4 @@
-import { turaKULCS, turavezetoKULCS } from "../../adat.js";
+import { turaKULCS, turavezetoKULCS, userKULCS } from "../../adat.js";
 import { turatipusKULCS } from "../../adat.js";
 import FejlecView from "./FejlecView.js";
 import SorView from "./SorView.js";
@@ -16,7 +16,6 @@ export default class TablaView {
     this.theadElem = szuloElem.find("thead");
     this.formElem = $(".urlap");
     this.gombElem = $("button");
-
 
     //console.log(this.formElem);
     //console.log(this.tbodyElem);

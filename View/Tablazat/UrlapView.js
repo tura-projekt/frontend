@@ -1,6 +1,6 @@
 import TextUrlapView from "./TextUrlapView.js";
 import NumberUrlapView from "./NumberUrlapView.js";
-import { turaLeiras, turatipusLeiras } from "../../adat.js";
+import { turaLeiras, turatipusLeiras, userLeiras } from "../../adat.js";
 import { turavezetoLeiras } from "../../adat.js";
 
 class UrlapView {
@@ -22,6 +22,9 @@ class UrlapView {
         break;
       case document.URL.indexOf("turak.html") >= 0:
         this.htmlOsszeallit(turaLeiras);
+        break;
+      case document.URL.indexOf("bejelentkezes.html") >= 0:
+        this.htmlOsszeallit(userLeiras);
         break;
     }
     
