@@ -225,40 +225,24 @@ export const turaKULCS = {
 };
 
 export const userLeiras = {
-  name: {
-    megjelenes: "Név",
-    tipus: "text",
-    value: "Példa",
-    pattern: {},
-    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
-    required: false,
-  },
-
   email: {
-    megjelenes: "email",
+    megjelenes: "e-mail",
     tipus: "text",
-    value: "Példa",
+    placeholder: "e-mail",
     pattern: {},
-    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
-    required: false,
-  },
-
-  telefonszam: {
-    megjelenes: "Telefonszám",
-    tipus: "text",
-    value: "Példa",
-    pattern: {},
-    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
+    value: "",
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!",
     required: false,
   },
 
   password: {
-    megjelenes: "Jelszó",
+    megjelenes: "Jeleszó",
     tipus: "text",
-    value: "Példa",
+    placeholder: "Jeleszó",
     pattern: {},
-    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!!",
-    required: true,
+    value: "",
+    szoveg: "Legalább 3 betű, a névnek nagybetűvel kell kezdődnie!",
+    required: false,
   },
 };
 
