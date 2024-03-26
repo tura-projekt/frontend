@@ -1,7 +1,11 @@
 export default class DataService {
   constructor() {
-    axios.defaults.baseURL = "http://localhost:8000/api/";
+    axios.defaults.baseURL = "http://localhost:8000";
+    axios.defaults.withCredentials = true;
+    this.token = "";
   }
+
+
   getAxiosData(url, callback) {
     console.log(url);
     axios
@@ -26,8 +30,34 @@ export default class DataService {
       });
   }
 
-  postAxiosData(url, data) {
+  async getCSRFToken() {
+    axios
+      .get("/token")
+      .then((response) => {
+        console.log("CSRF", response);
+        this.token = response.data.token;
+      })
+      .catch((error) => {
+        console.log("hiba", error);
+      });
+  }
+
+/*   postAxiosData(url, data) {
     console.log(data);
+    axios
+      .post(url, data)
+      .then((response) => {
+        console.log("RESP", response);
+      })
+      .catch((error) => {
+        console.log("hiba", error);
+      });
+  } */
+
+  async postAxiosData(url, data) {
+    await this.getCSRFToken();
+
+    data._token = this.token;
     axios
       .post(url, data)
       .then((response) => {
